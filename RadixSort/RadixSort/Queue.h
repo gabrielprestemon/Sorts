@@ -11,34 +11,34 @@ public:
 	Queue(Queue<T>& L);
 	~Queue() { clear(); }
 
-	//push an item onto the back of the queue
+	// push an item onto the back of the queue
 	void enqueue(T d);
-	//pop an item off of the front of the queue
+	// pop an item off of the front of the queue
 	T dequeue();
 
-	//returns true if the list does not contain any data
+	// returns true if the list does not contain any data
 	bool isEmpty() { return (cnt == 0); }
-	//returns the number of nodes in the list
+	// returns the number of nodes in the list
 	unsigned int Length() { return cnt; }
-	//returns the number of nodes in the list
+	// returns the number of nodes in the list
 	unsigned int Size() { return cnt; }
-	//returns the number of nodes in the list
+	// returns the number of nodes in the list
 	unsigned int Count() { return cnt; }
-	//returns the data at the head of the list
+	// returns the data at the head of the list
 	T Front() { return front->data; }
-	//returns the data at the tail of the list
+	// returns the data at the tail of the list
 	T Back() { return back->data; }
-	//returns the data at the index
+	// returns the data at the index
 	T itemAtIndex(int i);
 
-	//adds a queue to the back of this queue
+	// adds a queue to the back of this queue
 	void append(Queue<T>& L);
-	//clears the nodes from the list
+	// clears the nodes from the list
 	void clear() { while (!isEmpty()) { dequeue(); } }
-	//displays the list in cout
+	// displays the list in cout
 	void display();
 
-	//operators
+	// operators
 	Queue<T>& operator=(Queue<T>& rh);
 	Queue<T>& operator+=(Queue<T>& rh);
 	Queue<T>& operator+(Queue<T>& rh);
